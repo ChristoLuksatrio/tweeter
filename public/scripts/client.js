@@ -8,6 +8,12 @@
 
 
 $(document).ready(() => {
+
+  $('.tweetAnchor').click(function() {
+    $('.new-tweet').stop().slideToggle('slow', function() {
+
+    })
+  })
   
   const loadTweets = () => {
     $.ajax('/tweets', { method: 'GET'})
@@ -15,6 +21,12 @@ $(document).ready(() => {
       $('.tweetBox').empty();
       renderTweets(array);
     })
+  }
+
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 
   // loadTweets to loop over the database and append
@@ -28,7 +40,8 @@ $(document).ready(() => {
       <span class='handle'>${tweetData.user.handle}</span>
     </header>
     <div class='tweet-message'>
-      <p>${tweetData.content.text}</p>
+    
+      <p>${escape(tweetData.content.text)}</p>
     </div>
   
     <footer>
@@ -76,3 +89,4 @@ $(document).ready(() => {
   loadTweets();
 
 });
+
