@@ -6,41 +6,18 @@
 
 // Test / driver code (temporary). Eventually will get this from the server.
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
-
 
 $(document).ready(() => {
   
   const loadTweets = () => {
     $.ajax('/tweets', { method: 'GET'})
     .then(function(array) {
-      renderTweets(array)
+      $('.tweetBox').empty();
+      renderTweets(array);
     })
   }
+
+  // loadTweets to loop over the database and append
 
   const createTweetElement = tweetData => {
     return `
@@ -67,23 +44,34 @@ $(document).ready(() => {
   }
 
   const renderTweets = function(tweets) {
-    console.log(tweets);
     for (const tweet in tweets) {
       const $tweet = createTweetElement(tweets[tweet]);
-      $('.tweetBox').append($tweet);
+      $('.tweetBox').prepend($tweet);
     }
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
   }
-  
-  // renderTweets(loadTweets());
 
-  const $tweetFunction = $('.tweetFunction');
-  $tweetFunction.submit((event) => {
-    console.log('it worked!')
+  const $tweetSend = $('.tweetFunction');
+  $tweetSend.on('submit', function(event) {
     event.preventDefault();
+    const textLength = $tweetSend.serialize().length - 5;
+    if (textLength < 140 && textLength > 0) {
+      $.ajax('/tweets', { method: 'POST', data: $tweetSend.serialize()})
+      .then(() => {
+        loadTweets();
+        $tweetSend.trigger('reset');
+      })
+    } else if (textLength > 140) {
+      alert('Your tweet cannot be beyond 140 characters');
+    } else if (textLength <= 0) {
+      alert('Please enter your tweet');
+    }
   })
+
+
+  
 
   loadTweets();
 

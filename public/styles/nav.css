@@ -9,7 +9,19 @@ nav {
   padding: 1.5em;
 }
 
-nav span {
+nav .logo {
   font-family: 'Bungee', cursive;
   font-size: 30px;
 }
+
+nav .tweetAnchor {
+  float: right;
+}
+
+nav .arrow {
+  text-align: center;
+}
+
+/* #target {
+  scroll-behavior: smooth;
+} */

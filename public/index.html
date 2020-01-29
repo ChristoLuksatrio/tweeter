@@ -17,6 +17,7 @@
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -34,14 +35,22 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class='logo'>tweeter</span>
+      <a href='#target'>
+        <div class='tweetAnchor'>
+          <span><strong>Write</strong> a New Tweet</span>
+          <div class='arrow'>
+            <i class="fas fa-sort-down"></i>
+          </div>
+        </div>
+      </a>
     </nav>
 
     <header class='fancy-header'>
       <div class='avatar'>
         <img src="/images/profile-hex.png"> 
       </div class='avatar'>
-      <div>
+      <div id='target' >
         <h2><strong>Christo</strong> Luksatrio</h2>
       </div>
     </header>
@@ -65,25 +74,6 @@
       </section>
 
       <div class='tweetBox'>
-        <div class='tweets-container'>
-          <header>
-            <i class="fas fa-dog"></i>
-            <span class='name'>Chris</span>
-            <span class='handle'>@christoLuksatrio</span>
-          </header>
-          <div class='tweet-message'>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          </div>
-  
-          <footer>
-            <span class='tweet-date'>10 days ago</span>
-            <div class='tweet-buttons'>
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-heart"></i>
-            </div>
-            </footer>
-          </div>
       </div>
 
     </main>

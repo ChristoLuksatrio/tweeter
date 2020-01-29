@@ -15,6 +15,11 @@ ol, ul {
   list-style: none;
 }
 
+a, a:link, a:visited, a:focus, a:hover, a:active{
+  color:white;
+  text-decoration:none; 
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -22,6 +27,7 @@ img {
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
