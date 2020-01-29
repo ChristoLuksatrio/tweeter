@@ -1,0 +1,58 @@
+.tweets-container {
+  max-width: 700px;
+  margin: 20px auto 50px;
+  padding: 10px 20px;
+  border: 3px solid #555149;
+  position: relative;
+  justify-content: space-between;
+  transition: box-shadow 0.5s ease;
+}
+
+.tweets-container:hover {
+  box-shadow: 10px 10px #C4CBE3;
+}
+
+.tweets-container:hover .handle {
+  opacity: 1; 
+}
+
+.tweets-container:hover .tweet-buttons {
+  color: #3F56A1; 
+}
+
+.tweets-container .name {
+  vertical-align: middle;
+}
+
+.tweets-container .handle {
+  opacity: 0;
+  line-height: 4em;
+  float: right;
+  color :#C4CBE3;
+  transition: opacity 0.5s ease;
+}
+
+.tweets-container .avatar {
+  margin: 5px 5px 0 0;
+  vertical-align: middle;
+}
+
+.tweets-container header i {
+  vertical-align: middle;
+  font-size: 2.5em;
+}
+
+.tweet-message {
+  margin: 30px 0 5px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #555149;
+}
+
+.tweet-buttons {
+  float: right;
+}
+
+.tweets-container footer {
+  margin-bottom: 10px;
+}
+
