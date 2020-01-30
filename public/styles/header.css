@@ -3,11 +3,11 @@
   padding: 120px 0 80px;
   height: 450px;
   width: 100%;
-  background-color: #cc8800;
+  background-color: #ded7d0;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   position: relative;
   text-align: center;
-  color: white;
+  color: #555149;
 }
 
 .fancy-header header .avatar {

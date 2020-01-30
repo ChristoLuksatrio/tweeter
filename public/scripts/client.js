@@ -11,6 +11,8 @@ $(document).ready(() => {
 
   $( ".fancy-error" ).hide();
   $( ".fancy-error2" ).hide();
+  $( ".fancy-footer" ).hide();
+
 
 
   $('.tweetAnchor').click(function() {
@@ -95,6 +97,19 @@ $(document).ready(() => {
   
 
   loadTweets();
+  
+  $( ".fancy-footer" ).on('click', function(event) {
+    event.preventDefault();
+    window.scrollTo(0, 0); 
+  })
+
+  $(window).scroll(function() {     
+    if ($(window).scrollTop() >= $(document).height() - $(window).height() - 100) {
+      $( ".fancy-footer" ).fadeIn();  
+    } else {
+      $( ".fancy-footer" ).fadeOut();
+    }
+});
 
 });
 

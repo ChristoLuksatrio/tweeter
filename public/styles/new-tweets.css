@@ -2,7 +2,7 @@
   margin: 0 auto;
   font-family: 'Source Sans Pro', sans-serif;
   max-width: 800px;
-  padding: 50px;
+  padding: 60px 50px;
 }
 
 #tweet-placeholder {
@@ -16,7 +16,7 @@
 }
 
 #tweet-button {
-  background-color: #4052A1;
+  background-color: #C39181;
   color: white;
   font-family: 'Bungee', cursive;
   padding: 5px 10px;

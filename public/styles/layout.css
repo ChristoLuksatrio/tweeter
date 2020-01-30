@@ -52,6 +52,15 @@ main {
   width: 90%;
 }
 
+.fancy-footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 20px 30px;
+  font-size: 3.5em;
+  color: #C39181;
+}
+
 @media only screen and (min-width: 1024px) {
   body {
     flex-direction: row;

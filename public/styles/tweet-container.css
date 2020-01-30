@@ -9,7 +9,7 @@
 }
 
 .tweets-container:hover {
-  box-shadow: 10px 10px #C4CBE3;
+  box-shadow: 10px 10px #e8c2b7;
 }
 
 .tweets-container:hover .handle {
@@ -17,7 +17,7 @@
 }
 
 .tweets-container:hover .tweet-buttons {
-  color: #3F56A1; 
+  color: #C39181; 
 }
 
 .tweets-container .name {
@@ -28,7 +28,7 @@
   opacity: 0;
   line-height: 4em;
   float: right;
-  color :#C4CBE3;
+  color :#e8c2b7;
   transition: opacity 0.5s ease;
 }
 
