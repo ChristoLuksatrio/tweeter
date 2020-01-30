@@ -73,12 +73,14 @@ $(document).ready(() => {
     $( ".fancy-error" ).hide();
     $( ".fancy-error2" ).hide();
     event.preventDefault();
-    const textLength = $tweetSend.serialize().length - 5;
+    const textLength = $tweetSend.find('#tweet-placeholder').val().length;
     if (textLength < 140 && textLength > 0) {
       $.ajax('/tweets', { method: 'POST', data: $tweetSend.serialize()})
       .then(() => {
         loadTweets();
         $tweetSend.trigger('reset');
+        $('.counter').text('140');
+        $('.counter').css('color', '#555149');
       })
     } else if (textLength > 140) {
       $( ".fancy-error2" ).slideDown( "slow", function() {
