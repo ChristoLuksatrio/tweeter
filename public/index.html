@@ -60,6 +60,7 @@
           <h1>Compose Your Magnificent Tweet</h1>
         </div>
 
+        
         <form class='tweetFunction' action='/tweets' method="POST">
           <div>
             <textarea id='tweet-placeholder' name="text" placeholder="What are you humming about?"></textarea>
@@ -69,7 +70,14 @@
             <span class="counter">140</span>
           </div>
         </form>
+        <div class='fancy-error'>
+          <p>Please enter your tweet</p>
+        </div>
+        <div class='fancy-error2'>
+          <p>Please keep your tweet below 140 characters</p>
+        </div>
       </section>
+        
 
       <div class='tweetBox'>
       </div>

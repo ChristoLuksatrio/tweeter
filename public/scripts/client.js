@@ -9,11 +9,16 @@
 
 $(document).ready(() => {
 
+  $( ".fancy-error" ).hide();
+  $( ".fancy-error2" ).hide();
+
+
   $('.tweetAnchor').click(function() {
     $('.new-tweet').stop().slideToggle('slow', function() {
-
     })
   })
+
+  
   
   const loadTweets = () => {
     $.ajax('/tweets', { method: 'GET'})
@@ -61,13 +66,12 @@ $(document).ready(() => {
       const $tweet = createTweetElement(tweets[tweet]);
       $('.tweetBox').prepend($tweet);
     }
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
   }
 
   const $tweetSend = $('.tweetFunction');
   $tweetSend.on('submit', function(event) {
+    $( ".fancy-error" ).hide();
+    $( ".fancy-error2" ).hide();
     event.preventDefault();
     const textLength = $tweetSend.serialize().length - 5;
     if (textLength < 140 && textLength > 0) {
@@ -77,9 +81,11 @@ $(document).ready(() => {
         $tweetSend.trigger('reset');
       })
     } else if (textLength > 140) {
-      alert('Your tweet cannot be beyond 140 characters');
+      $( ".fancy-error2" ).slideDown( "slow", function() {
+      });
     } else if (textLength <= 0) {
-      alert('Please enter your tweet');
+      $( ".fancy-error" ).slideDown( "slow", function() {
+      });
     }
   })
 

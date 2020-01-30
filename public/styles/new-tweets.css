@@ -33,3 +33,18 @@
   padding-bottom: 20px;
 }
 
+.fancy-error {
+  margin-top: 10px;
+  font-family: 'Bungee', cursive;
+  text-align: center;
+  color: #FF0000;
+  font-weight: 600;
+}
+
+.fancy-error2 {
+  margin-top: 10px;
+  font-family: 'Bungee', cursive;
+  text-align: center;
+  color: #FF0000;
+  font-weight: 600;
+}

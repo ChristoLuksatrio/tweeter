@@ -18,10 +18,22 @@ nav .tweetAnchor {
   float: right;
 }
 
-nav .arrow {
-  text-align: center;
+@-webkit-keyframes levitate {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(10px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
 }
 
-/* #target {
-  scroll-behavior: smooth;
-} */
+nav .arrow {
+  text-align: center;
+  -webkit-animation: levitate 2s infinite;
+}
+
