@@ -52,7 +52,7 @@ $(document).ready(() => {
     </div>
   
     <footer>
-      <span class='tweet-date'>${tweetData.created_at}</span>
+      <span class='tweet-date'>${moment(tweetData.created_at).fromNow()}</span>
       <div class='tweet-buttons'>
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
@@ -64,8 +64,8 @@ $(document).ready(() => {
   }
 
   const renderTweets = function(tweets) {
-    for (const tweet in tweets) {
-      const $tweet = createTweetElement(tweets[tweet]);
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
       $('.tweetBox').prepend($tweet);
     }
   }

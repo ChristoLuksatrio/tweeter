@@ -24,7 +24,7 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Pacifico|Source+Sans+Pro:400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
     <!-- Glyphicons -->
     <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
@@ -32,13 +32,16 @@
     <!-- Tells it to set screen to device width. Also ensures that it doesn't zoom in on smaller devices -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
+    <!-- Converts miliseconds into a date format -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+
 
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span class='logo'>tweeter</span>
+      <span class='logo'>Tweeter</span>
         <div class='tweetAnchor'>
           <span><strong>Write</strong> a New Tweet</span>
           <div class='arrow'>
@@ -76,7 +79,7 @@
             <div class='fancy-error2'>
               <p>Please keep your tweet below 140 characters</p>
             </div>
-            <span class="counter">140</span>
+            <span id='counter' class="counter">140</span>
           </div>
         </form>
       </section>

@@ -1,15 +1,16 @@
 .tweets-container {
   max-width: 700px;
-  margin: 20px auto 50px;
+  margin: 20px 50px 50px;
   padding: 10px 20px;
   border: 3px solid #555149;
   position: relative;
   justify-content: space-between;
-  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .tweets-container:hover {
   box-shadow: 10px 10px #e8c2b7;
+  transform: translate(-0.5em,-0.5em);
 }
 
 .tweets-container:hover .handle {

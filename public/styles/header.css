@@ -1,7 +1,7 @@
 .fancy-header {
   margin: 0 auto;
   padding: 120px 0 80px;
-  height: 450px;
+  height: 75vh;
   width: 100%;
   background-color: #ded7d0;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
@@ -10,10 +10,10 @@
   color: #555149;
 }
 
-.fancy-header header .avatar {
+.fancy-header .avatar {
   display: block;
   margin: 0 auto;
-  padding-top: 30px;
+  width: 20rem;
 }
 
 @media only screen and (min-width: 1024px) {

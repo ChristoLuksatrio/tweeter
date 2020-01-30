@@ -1,9 +1,7 @@
 $(document).ready((e) => {
   console.log('Document is ready baby!');
 
-
-
-  $('#tweet-placeholder').keyup(function(e) {
+  $('#tweet-placeholder').on('input', function(e) {
     const counter = $('.counter');
     const charLength = $(this).val().length;
     const count = 140 - charLength;
