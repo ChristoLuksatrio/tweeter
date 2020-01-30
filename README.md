@@ -1,8 +1,18 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a mini clone of Twitter. The app lets you post 140-character tweets to a server. I used the following to create this app:
+- HTML
+- CSS 
+- JS
+- JQuery
+- AJAX
+- Node
+- Express
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+## Screenshots
+
+!['Screenshot of Tablet view'](https://github.com/ChristoLuksatrio/tweeter/blob/master/docs/tweeter-2.png?raw=true)
+!['Screenshot of Desktop view'](https://github.com/ChristoLuksatrio/tweeter/blob/master/docs/tweeter-1.png?raw=true)
 
 ## Getting Started
 
