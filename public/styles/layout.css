@@ -43,11 +43,24 @@ body {
   background-color: #F3F1EC;
   font-size: 18px;
   font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   margin: 0 auto;
   width: 90%;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    margin-top: 80px;
+  }
+
+  main {
+    width:  60%;
+  }
 }
 
 
