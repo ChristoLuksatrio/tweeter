@@ -83,10 +83,10 @@ $(document).ready(() => {
         $('.counter').css('color', '#555149');
       })
     } else if (textLength > 140) {
-      $( ".fancy-error2" ).slideDown( "slow", function() {
+      $( ".fancy-error2" ).fadeIn( "slow", function() {
       });
     } else if (textLength <= 0) {
-      $( ".fancy-error" ).slideDown( "slow", function() {
+      $( ".fancy-error" ).fadeIn( "slow", function() {
       });
     }
   })

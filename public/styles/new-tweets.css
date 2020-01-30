@@ -34,7 +34,8 @@
 }
 
 .fancy-error {
-  margin-top: 10px;
+  display: inline-block;
+  margin-left: 10px;
   font-family: 'Bungee', cursive;
   text-align: center;
   color: #FF0000;
@@ -42,7 +43,8 @@
 }
 
 .fancy-error2 {
-  margin-top: 10px;
+  display: inline-block;
+  margin-left: 10px;
   font-family: 'Bungee', cursive;
   text-align: center;
   color: #FF0000;
